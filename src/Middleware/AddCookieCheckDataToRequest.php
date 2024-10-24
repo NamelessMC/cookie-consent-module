@@ -43,6 +43,8 @@ class AddCookieCheckDataToRequest extends \NamelessMC\Framework\Pages\Middleware
             )
         );
 
+        echo "module " . spl_object_id($this->template) . '<br>';
+
         $this->smarty->assign([
             'COOKIE_URL' => $cookie_url,
             'COOKIE_NOTICE_HEADER' => $this->cookiesLanguage->get('cookie', 'cookie_notice'),
