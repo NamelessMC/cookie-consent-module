@@ -16,7 +16,7 @@ return [
         ->templateDirectory(__DIR__ . '/views')
         ->register('/cookies', 'cookies', 'cookie/cookie_notice', \NamelessMC\CookieConsent\Pages\Cookies::class, false),
     (new Extend\PanelPages)
-        //->templateDirectory(__DIR__ . '/panel_views')
+        ->templateDirectory(__DIR__ . '/panel_views')
         ->register('/cookies', 'cookie_settings', 'cookie/cookies', \NamelessMC\CookieConsent\Pages\Panel\Cookies::class, 'admincp.cookies', 'fas fa-cookie-bite'),
     (new Extend\Permissions)
         ->register([
