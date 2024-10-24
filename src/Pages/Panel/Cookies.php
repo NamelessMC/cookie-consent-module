@@ -29,6 +29,10 @@ class Cookies extends PanelPage
         return 'cookies/cookies.tpl';
     }
 
+    public function permission(): string {
+        return 'admincp.cookies';
+    }
+
     public function render() {
         if (\Input::exists()) {
             $errors = [];
