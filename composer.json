@@ -10,7 +10,7 @@
     "extra": {
         "nameless_module": {
             "display_name": "Cookie Consent",
-            "name": "cookie-consent",
+            "name": "cookies",
             "description": "Adds a customizable cookies consent popup to your website.",
             "version": "2.1.2",
             "nameless_version": "2.1.0"
