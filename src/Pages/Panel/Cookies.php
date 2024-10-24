@@ -97,8 +97,8 @@ class Cookies extends PanelPage
             'COOKIES' => $this->cookiesLanguage->get('cookie', 'cookies'),
             'TOKEN' => \Token::get(),
             'SUBMIT' => $this->coreLanguage->get('general', 'submit'),
-            'COOKIE_NOTICE' => $this->coreLanguage->get('cookie', 'cookie_notice'),
+            'COOKIE_NOTICE' => $this->cookiesLanguage->get('cookie', 'cookie_notice'),
             'COOKIE_NOTICE_VALUE' => \Output::getPurified($cookies),
-        ]);        
+        ]);
     }
 }

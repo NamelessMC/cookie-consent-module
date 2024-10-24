@@ -17,11 +17,11 @@ return [
         ->register('/cookies', 'cookies', 'cookie/cookie_notice', \NamelessMC\CookieConsent\Pages\Cookies::class, false),
     (new Extend\PanelPages)
         ->templateDirectory(__DIR__ . '/panel_views')
-        ->register('/panel/cookies', 'cookie_settings', 'cookies/cookies', \NamelessMC\CookieConsent\Pages\Panel\Cookies::class, 'admincp.cookies', 'fas fa-cookie-bite'),
+        ->register('/panel/cookies', 'cookie_settings', 'cookie/cookies', \NamelessMC\CookieConsent\Pages\Panel\Cookies::class, 'admincp.cookies', 'fas fa-cookie-bite'),
     (new Extend\Permissions)
         ->register([
             'staffcp' => [
-                'admincp.cookies' => 'cookies/cookies',
+                'admincp.cookies' => 'cookie/cookies',
             ],
         ]),
 ];
