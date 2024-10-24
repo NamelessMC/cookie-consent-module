@@ -21,7 +21,8 @@ class FrontendLoadingHook extends \NamelessMC\Framework\Pages\FrontendLoadingHoo
         $this->smarty = $smarty;
     }
 
-    public function handle() {
+    public function handle(): void
+    {
         $this->cache->setCache('cookie_consent_module_cache');
         $options = $this->cache->fetch('options', function () {
             return ['type' => 'opt-in', 'position' => 'bottom-right'];
