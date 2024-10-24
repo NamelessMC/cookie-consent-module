@@ -31,7 +31,7 @@ class AddCookieCheckDataToRequest extends \NamelessMC\Framework\Pages\Middleware
         $cookie_url = \URL::build('/cookies');
 
         $this->template->addJSScript(
-            $this->generateScript(
+            $script = $this->generateScript(
                 array_merge($options, [
                     'cookies' => $this->cookiesLanguage->get('cookie', 'cookies'),
                     'message' => $this->cookiesLanguage->get('cookie', 'cookie_popup'),
@@ -43,7 +43,7 @@ class AddCookieCheckDataToRequest extends \NamelessMC\Framework\Pages\Middleware
             )
         );
 
-        echo "module " . spl_object_id($this->template) . '<br>';
+        echo $script . '<br>';
 
         $this->smarty->assign([
             'COOKIE_URL' => $cookie_url,
