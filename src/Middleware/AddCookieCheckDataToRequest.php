@@ -1,8 +1,8 @@
 <?php
 
-namespace NamelessMC\CookieConsent;
+namespace NamelessMC\CookieConsent\Middleware;
 
-class FrontendLoadingHook extends \NamelessMC\Framework\Pages\FrontendLoadingHook
+class AddCookieCheckDataToRequest extends \NamelessMC\Framework\Pages\Middleware
 {
     private \Cache $cache;
     private \TemplateBase $template;

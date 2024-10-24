@@ -8,8 +8,8 @@ return [
         ->css(__DIR__ . '/assets/css/cookieconsent.min.css')
         ->js(__DIR__ . '/assets/js/configure.js', ['cookies'])
         ->js(__DIR__ . '/assets/js/cookieconsent.min.js'),
-    (new Extend\FrontendLoading)
-        ->hook(\NamelessMC\CookieConsent\FrontendLoadingHook::class),
+    (new Extend\FrontendMiddleware)
+        ->register(\NamelessMC\CookieConsent\Middleware\AddCookieCheckDataToRequest::class),
     (new Extend\Sitemap) // TODO could this be done via FrontendPages ?
         ->path('/cookies', 0.9),
     (new Extend\FrontendPages)
