@@ -5,9 +5,9 @@ use NamelessMC\Framework\Extend;
 return [
     (new Extend\Language(__DIR__ . '/language')),
     (new Extend\FrontendAssets)
-        ->css(__DIR__ . '/assets/css/cookieconsent.min.css')
-        ->js(__DIR__ . '/assets/js/configure.js', ['cookies'])
-        ->js(__DIR__ . '/assets/js/cookieconsent.min.js'),
+        ->css(__DIR__ . '/assets/frontend/css/cookieconsent.min.css')
+        ->js(__DIR__ . '/assets/frontend/js/configure.js', ['cookies'])
+        ->js(__DIR__ . '/assets/frontend/js/cookieconsent.min.js'),
     (new Extend\FrontendMiddleware)
         ->register(\NamelessMC\CookieConsent\Middleware\AddCookieCheckDataToRequest::class),
     (new Extend\Sitemap) // TODO could this be done via FrontendPages ?
