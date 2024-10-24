@@ -120,8 +120,6 @@ class AddCookieCheckDataToRequest extends \NamelessMC\Framework\Pages\Middleware
 
         $json = json_encode($script_options, JSON_PRETTY_PRINT);
 
-        $file = file_get_contents(__DIR__ . '/../../assets/frontend/js/template.js');
-        dd($file);
         return str_replace(
             '//"{x}"',
             substr($json, 1, -1),
