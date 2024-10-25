@@ -15,10 +15,10 @@ class Cookies extends FrontendPage {
 
     public function __construct(
         \Smarty $smarty,
-        \Language $cookiesLanguage
+        \Illuminate\Container\Container $container
     ) {
         $this->smarty = $smarty;
-        $this->cookiesLanguage = $cookiesLanguage;
+        $this->cookiesLanguage = $container->get('cookiesLanguage');
     }
 
     public function pageName(): string {

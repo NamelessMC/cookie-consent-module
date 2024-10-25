@@ -12,12 +12,12 @@ class AddCookieCheckDataToRequest extends \NamelessMC\Framework\Pages\Middleware
     public function __construct(
         \Cache $cache,
         \TemplateBase $template,
-        \Language $cookiesLanguage,
-        \Smarty $smarty
+        \Smarty $smarty,
+        \Illuminate\Container\Container $container
     ) {
         $this->cache = $cache;
         $this->template = $template;
-        $this->cookiesLanguage = $cookiesLanguage;
+        $this->cookiesLanguage = $container->get('cookiesLanguage');
         $this->smarty = $smarty;
     }
 
