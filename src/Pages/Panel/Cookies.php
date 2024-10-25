@@ -13,12 +13,11 @@ class Cookies extends PanelPage
 
     public function __construct(
         \Smarty $smarty,
-        \Language $coreLanguage,
-        \Illuminate\Container\Container $container,
+        \Language $coreLanguage
     ) {
         $this->smarty = $smarty;
         $this->coreLanguage = $coreLanguage;
-        $this->cookiesLanguage = $container->get('cookiesLanguage');
+        $this->cookiesLanguage = \Illuminate\Container\Container::getInstance()->get('cookiesLanguage');
     }
 
     public function pageName(): string {
