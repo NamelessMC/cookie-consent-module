@@ -88,7 +88,7 @@ class Cookies extends PanelPage
                 'ERRORS_TITLE' => $this->coreLanguage->get('general', 'error')
             ]);
         }
-        dd($this->cookiesLanguage);
+
         // Get cookie notice
         $cookies = \DB::getInstance()->query('SELECT value FROM nl2_privacy_terms WHERE `name` = ?', ['cookies'])->first()->value;
 
